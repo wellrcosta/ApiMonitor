@@ -20,4 +20,7 @@ public class ApiLogModel {
     private String responseBody;
     private String responseHeaders;
     private String requestMethod;
+
+    @ManyToOne
+    private MonitoredApiModel monitoredApi;
 }

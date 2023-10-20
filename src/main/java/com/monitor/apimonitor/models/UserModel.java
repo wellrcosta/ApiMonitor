@@ -5,6 +5,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -19,6 +20,10 @@ public class UserModel {
     private boolean admin;
     private boolean emailConfirmed;
     private String emailConfirmationToken;
+
+    @OneToMany
+    private Set<MonitoredApiModel> monitoredApis;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 }
