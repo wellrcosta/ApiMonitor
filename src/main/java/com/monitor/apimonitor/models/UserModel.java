@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long userId;
     private String name;
     private String email;
     private String password;
